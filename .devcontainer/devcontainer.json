@@ -1,0 +1,22 @@
+{
+    "name": "Anemometer API",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "backend",
+    "workspaceFolder": "/src/",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "editorconfig.editorconfig",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "vscodevim.vim"
+            ]
+        }
+    },
+    "containerEnv": {
+        "PYTHONUNBUFFERED": "True",
+        "UV_LINK_MODE": "copy",
+        "UV_PROJECT_ENVIRONMENT": "/home/vscode/.venv"
+    },
+    "postCreateCommand": "uv sync --frozen"
+}
